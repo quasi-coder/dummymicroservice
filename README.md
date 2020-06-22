@@ -1,5 +1,6 @@
 #### DummyMicroservice
-#####To launch the application, either right-click the public static void main in PayRollApplication and select Run from your IDE, or: 
+####To launch the application, either right-click the public static void main in PayRollApplication and select Run from your IDE, or: 
+    
     Spring Initializr uses maven wrapper so type this:
     $ ./mvnw clean spring-boot:run
 
