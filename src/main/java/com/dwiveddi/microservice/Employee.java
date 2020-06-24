@@ -11,13 +11,17 @@ public class Employee {
     private @Id @GeneratedValue Long id;
     private String name;
     private String role;
+    private String emailId;
+    private String phoneNumber;
 
     Employee() {}
 
-    Employee(String name, String role) {
+    Employee(String name, String role, String emailId,String phoneNumber) {
 
         this.name = name;
         this.role = role;
+        this.emailId = emailId;
+        this.phoneNumber = phoneNumber;
     }
 
     public Long getId() {
@@ -32,6 +36,14 @@ public class Employee {
         return this.role;
     }
 
+    public String getEmailId() {
+        return emailId;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -44,6 +56,14 @@ public class Employee {
         this.role = role;
     }
 
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     @Override
     public boolean equals(Object o) {
 
@@ -53,16 +73,23 @@ public class Employee {
             return false;
         Employee employee = (Employee) o;
         return Objects.equals(this.id, employee.id) && Objects.equals(this.name, employee.name)
-                && Objects.equals(this.role, employee.role);
+                && Objects.equals(this.role, employee.role) && Objects.equals(this.emailId, employee.emailId)
+                && Objects.equals(this.phoneNumber, employee.phoneNumber);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.id, this.name, this.role);
+        return Objects.hash(this.id, this.name, this.role, this.emailId, this.phoneNumber);
     }
 
     @Override
     public String toString() {
-        return "Employee{" + "id=" + this.id + ", name='" + this.name + '\'' + ", role='" + this.role + '\'' + '}';
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", role='" + role + '\'' +
+                ", emailId='" + emailId + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }

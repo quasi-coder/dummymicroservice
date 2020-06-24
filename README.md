@@ -12,10 +12,10 @@
     curl -v localhost:8080/employees/99
 
     Creates a new Employee record, and then sends the content back to us…​
-    curl -X POST localhost:8080/employees -H 'Content-type:application/json' -d '{"name": "Samwise Gamgee", "role": "gardener"}'
+    curl -X POST localhost:8080/employees -H 'Content-type:application/json' -d '{"name": "Samwise Gamgee", "role": "gardener","emailId":"SamwiseGamgee@gmail.com","phoneNumber":"3333333"}'
 
     Alter the user…​
-    curl -X PUT localhost:8080/employees/3 -H 'Content-type:application/json' -d '{"name": "Samwise Gamgee", "role": "ring bearer"}'
+    curl -X PUT localhost:8080/employees/3 -H 'Content-type:application/json' -d '{"name": "Samwise Gamgee", "role": "ring bearer","emailId":"SamwiseGamgee@gmail.com","phoneNumber":"3333333"}'
 
     And you can delete…​
     curl -X DELETE localhost:8080/employees/3

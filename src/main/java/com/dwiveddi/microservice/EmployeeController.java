@@ -46,6 +46,8 @@ public class EmployeeController {
                 .map(employee -> {
                     employee.setName(newEmployee.getName());
                     employee.setRole(newEmployee.getRole());
+                    employee.setEmailId(newEmployee.getEmailId());
+                    employee.setPhoneNumber(newEmployee.getPhoneNumber());
                     return repository.save(employee);
                 })
                 .orElseGet(() -> {
